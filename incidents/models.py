@@ -21,3 +21,4 @@ class Incident(models.Model):
     length_open = models.IntegerField()
     description = models.TextField()
     status = models.ForeignKey(Status)
+    upvote = models.IntegerField()
