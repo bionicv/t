@@ -1,4 +1,5 @@
 from django.db import models
+import admin
 import locations
 # Create your models here.
 class AlertType(models.Model):
@@ -14,7 +15,8 @@ class Status(models.Model):
 
 
 class Alert(models.Model):
-    type = models.ForeignKey(AlertType)
+    name = models.CharField(max_length=30)
+    incident_type = models.ForeignKey(AlertType)
     location = models.ForeignKey(locations.Location)
     time = models.DateTimeField()
     emergency_level = models.ForeignKey(EmergencyLevel)
@@ -23,3 +25,15 @@ class Alert(models.Model):
     status = models.ForeignKey(Status)
     up_vote = models.IntegerField()
     down_vote = models.IntegerField()
+
+    def get_absolute_url(self):
+        return ('view_alert', None, { 'alert': self.name })
+
+
+### Admin
+
+class AlertAdmin(admin.ModelAdmin):
+    search_fields = ["name"]
+
+
+admin.site.register(Alert, AlertAdmin)

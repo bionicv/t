@@ -1,5 +1,6 @@
 from django.db import models
 import locations
+import admin
 # Create your models here.
 class IncidentType(models.Model):
     name = models.CharField(max_length=30)
@@ -14,7 +15,8 @@ class Status(models.Model):
 
 
 class Incident(models.Model):
-    type = models.ForeignKey(IncidentType)
+    name = models.CharField(max_length=30)
+    incident_type = models.ForeignKey(IncidentType)
     location = models.ForeignKey(locations.Location)
     time = models.DateTimeField()
     emergency_level = models.ForeignKey(EmergencyLevel)
@@ -23,3 +25,12 @@ class Incident(models.Model):
     status = models.ForeignKey(Status)
     up_vote = models.IntegerField()
     down_vote = models.IntegerField()
+
+
+### Admin
+
+class IncidentAdmin(admin.ModelAdmin):
+    search_fields = ["name"]
+
+
+admin.site.register(Incident, IncidentAdmin)
