@@ -2,18 +2,53 @@
 
 {% load bootstrap3 %}
 
-{% block title %}Tshwane Connect Incidents{% endblock %}
+{% block title %}Tshwane Connect{% endblock %}
 
 {% block content %}
 
-{% bootstrap_button 'View Alerts' size='lg' %}
-<p/>
-{% bootstrap_button 'View/Log Incidents' size='lg' %}
-<p/>
-{% bootstrap_button 'Upcoming Events' size='lg' %}
-<p/>
-{% bootstrap_button 'Meter Readings' size='lg' %}
-<p/>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-3">
+            <!-- incident action -->
+            <button type="button" class="btn btn-default btn-lg text-center">
+                <span class="glyphicon glyphicon-italic" aria-hidden="true" style="font-size:200px"></span>
+
+                <p>Report Incidents</p>
+            </button>
+        </div>
+        <div class="col-md-3">
+            <!-- alerts action -->
+            <button type="button" class="btn btn-default btn-lg text-center">
+                <span class="glyphicon glyphicon-alert" aria-hidden="true" style="font-size:200px"></span>
+
+                <p>Alert</p>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <!-- submit readings action -->
+            <button type="button" class="btn btn-default btn-lg text-center">
+                <span class="glyphicon glyphicon-list-alt" aria-hidden="true" style="font-size:200px"></span>
+
+                <p>Submit Readings</p>
+            </button>
+        </div>
+        <div class="col-md-3">
+            <!-- thumbs up action -->
+            <button type="button" class="btn btn-default btn-lg text-center">
+                <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true" style="font-size:200px"></span>
+
+                <p>ThumbsUp</p>
+            </button>
+        </div>
+    </div>
+</div>
+
+{% bootstrap_icon "road" %}
+
 Built in <strong>Tshwane</strong>.
 
 
