@@ -16,10 +16,12 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from .views import HomePageView
-from incidents.views import IncidentPageView
+
+from incidents.views import IncidentPageView, SubmitIncidentPageView
 
 urlpatterns = [
     url(r'^$', HomePageView.as_view(), name='home'),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^incidents/', IncidentPageView.as_view(), name='incidents'), # ADD HIS NEW TUPLE!
+    url(r'^submit_incident/', SubmitIncidentPageView.as_view(), name='submit_incident'), # ADD HIS NEW TUPLE!
 ]
