@@ -8,6 +8,12 @@
 
 <h1>Tshwane Connect</h1>
 <p>Future Home</p>
-
+<form method="post" action="">
+    {{ formset.management_form }}
+    {% for form in formset %}
+        {{ form }}
+    {% endfor %}
+</form>
+</form>
 </body>
 </html>

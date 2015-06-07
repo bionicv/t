@@ -18,4 +18,5 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^incidents/', include('incidents.urls')), # ADD THIS NEW TUPLE!
 ]
