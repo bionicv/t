@@ -62,3 +62,7 @@ docs/_build/
 target/
 
 .idea/
+.idea/*
+
+db.sqlite3
+django-bootstrap3.pdf
