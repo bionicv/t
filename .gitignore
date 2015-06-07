@@ -65,3 +65,4 @@ target/
 .idea/*
 
 db.sqlite3
+django-bootstrap3.pdf
