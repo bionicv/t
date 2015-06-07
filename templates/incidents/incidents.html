@@ -1,16 +1,86 @@
 {% extends 'base/base.html' %}
 
-{% block title %}Tshwane Connect Home{% endblock %}
+{% block title %}Tshwane Connect Incidents{% endblock %}
 
 {% block content %}
 
-<form method="post" action="">
-    {{ formset.management_form }}
-    {% for form in formset %}
-    {{ form }}
-    {% endfor %}
+<a href="{% url 'submit_incident' %}"f class="btn btn-default btn-lg text-center" role="button"><p>Submit Incident</p></a>
+
+<br/>
+
+<form>
+    <div class="form-group">
+        <div class="panel panel-default">
+            <div class="panel-heading"><h4><strong>Incident Report 5</strong></h4></div>
+            <div class="panel-body">
+                <label for="type">Type:</label>
+                <input type="text" class="form-control" placeholder="Refuse Collection" id="type">
+                <label for="location">Location:</label>
+                <input type="text" class="form-control" placeholder="Pretia Central" id="location">
+                <label for="date-reported">Date Reported:</label>
+                <input type="text" class="form-control" placeholder="04 June 2015" id="date-reported">
+                <label for="submitted-by">Submitted by:</label>
+                <input type="text" class="form-control" placeholder="Tshepo" id="submitted-by">
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading"><h4><strong>Incident Report 4</strong></h4></div>
+            <div class="panel-body">
+                <label for="type">Type:</label>
+                <input type="text" class="form-control" placeholder="Pot Holes" id="type">
+                <label for="location">Location:</label>
+                <input type="text" class="form-control" placeholder="Soshanguve Ext 15" id="location">
+                <label for="date-reported">Date Reported:</label>
+                <input type="text" class="form-control" placeholder="03 June 2015" id="date-reported">
+                <label for="submitted-by">Submitted by:</label>
+                <input type="text" class="form-control" placeholder="Peter" id="submitted-by">
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading"><h4><strong>Incident Report 3</strong></h4></div>
+            <div class="panel-body">
+                <label for="type">Type:</label>
+                <input type="text" class="form-control" placeholder="Pot Holes" id="type">
+                <label for="location">Location:</label>
+                <input type="text" class="form-control" placeholder="Soshanguve Ext 15" id="location">
+                <label for="date-reported">Date Reported:</label>
+                <input type="text" class="form-control" placeholder="02 June 2015" id="date-reported">
+                <label for="submitted-by">Submitted by:</label>
+                <input type="text" class="form-control" placeholder="Meshack" id="submitted-by">
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading"><h4><strong>Incident Report 2</strong></h4></div>
+            <div class="panel-body">
+                <label for="type">Type:</label>
+                <input type="text" class="form-control" placeholder="Pipe Burst" id="type">
+                <label for="location">Location:</label>
+                <input type="text" class="form-control" placeholder="Mmamelodi" id="location">
+                <label for="date-reported">Date Reported:</label>
+                <input type="text" class="form-control" placeholder="02 June 2015" id="date-reported">
+                <label for="submitted-by">Submitted by:</label>
+                <input type="text" class="form-control" placeholder="Sam" id="submitted-by">
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading"><h4><strong>Incident Report 1</strong></h4></div>
+            <div class="panel-body">
+                <label for="type">Type:</label>
+                <input type="text" class="form-control" placeholder="Load Shedding" id="type">
+                <label for="location">Location:</label>
+                <input type="text" class="form-control" placeholder="TUT-Pretoria" id="location">
+                <label for="date-reported">Date Reported:</label>
+                <input type="text" class="form-control" placeholder="01 June 2015" id="date-reported">
+                <label for="submitted-by">Submitted by:</label>
+                <input type="text" class="form-control" placeholder="Thando" id="submitted-by">
+            </div>
+        </div>
+    </div>
 </form>
 
-Built in <strong>Tshwane</strong>.
 
 {% endblock %}

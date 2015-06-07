@@ -1,0 +1,72 @@
+{% extends 'base/base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}Tshwane Connect Submit Incident{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h2 class="text-center">Report Incidents</h2>
+
+    <div class="row">
+        <div class="col-md-3">
+            <!-- incident action -->
+            <button type="button" class="btn btn-default btn-lg">
+                <span class="glyphicon glyphicon-flash" aria-hidden="true" style="font-size:200px"></span>
+
+                <p>Electricity</p>
+            </button>
+        </div>
+        <div class="col-md-3">
+            <!-- alerts action -->
+            <button type="button" class="btn btn-default btn-lg">
+                <span class="glyphicon glyphicon-road" aria-hidden="true" style="font-size:200px"></span>
+
+                <p>Road</p>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <!-- submit readings action -->
+            <button type="button" class="btn btn-default btn-lg">
+                <span class="glyphicon glyphicon-trash" aria-hidden="true" style="font-size:200px"></span>
+
+                <p>Refuse Collection</p>
+            </button>
+        </div>
+        <div class="col-md-3">
+            <!-- thumbs up action -->
+            <button type="button" class="btn btn-default btn-lg">
+                <span class="glyphicon glyphicon-bed" aria-hidden="true" style="font-size:200px"></span>
+
+                <p>Transport</p>
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <!-- submit readings action -->
+            <button type="button" class="btn btn-default btn-lg">
+                <img src="water.png" alt="water" style="width=200px height=200px">
+
+                <p>Water</p>
+            </button>
+        </div>
+        <div class="col-md-3">
+            <!-- submit readings action -->
+            <button type="button" class="btn btn-default btn-lg">
+                <img src="other.png" alt="other" style="width=200px height=200px">
+                <p>Other</p>
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<br/>
+
+Built in <strong>Tshwane</strong>.
+
+{% endblock %}

@@ -3,18 +3,18 @@ from incidents.models import Incident
 from django.core.exceptions import ValidationError
 
 
-class ContactForm(forms.ModelForm):
-    confirm_email = forms.EmailField(
-        label="Confirm email",
-        required=True,
-    )
-
-    class Meta:
-        model = Incident
-
-    def __init__(self, *args, **kwargs):
-        if kwargs.get('instance'):
-            email = kwargs['instance'].name
-            kwargs.setdefault('initial', {})['confirm_email'] = email
-
-        return super(ContactForm, self).__init__(*args, **kwargs)
+# class SubmitIncidentForm(forms.ModelForm):
+#     class Meta:
+#         model = Incident
+#
+#     def __init__(self, *args, **kwargs):
+#         if kwargs.get('instance'):
+#             name = kwargs['instance'].name
+#             time = kwargs['instance'].time
+#             description = kwargs['instance'].description
+#
+#         return super(SubmitIncidentForm, self).__init__(*args, **kwargs)
+#
+#     def submit_incident(self):
+#         # Submit incident
+#         pass

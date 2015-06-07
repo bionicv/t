@@ -5,7 +5,7 @@ from django.forms import ModelForm
 
 # Create your models here.
 class IncidentType(models.Model):
-    name = models.CharField(max_length=30)
+    type_name = models.CharField(max_length=30)
 
 
 class EmergencyLevel(models.Model):
@@ -27,10 +27,10 @@ class Incident(models.Model):
     up_vote = models.IntegerField()
     down_vote = models.IntegerField()
 
-class AuthorForm(ModelForm):
-    class Meta:
-        model = Incident
-        fields = ['name', 'incident_type', 'time']
+# class IncidentForm(ModelForm):
+#     class Meta:
+#         model = Incident
+#         fields = ['name', 'incident_type', 'time']
 
 ### Admin
 
