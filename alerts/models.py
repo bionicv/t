@@ -1,6 +1,6 @@
 from django.db import models
 import admin
-import locations
+from locations.models import Location
 # Create your models here.
 class AlertType(models.Model):
     name = models.CharField(max_length=30)
@@ -17,7 +17,7 @@ class Status(models.Model):
 class Alert(models.Model):
     name = models.CharField(max_length=30)
     incident_type = models.ForeignKey(AlertType)
-    location = models.ForeignKey(locations.Location)
+    location = models.ForeignKey(Location)
     time = models.DateTimeField()
     emergency_level = models.ForeignKey(EmergencyLevel)
     length_open = models.IntegerField()
@@ -32,8 +32,8 @@ class Alert(models.Model):
 
 ### Admin
 
-class AlertAdmin(admin.ModelAdmin):
-    search_fields = ["name"]
-
-
-admin.site.register(Alert, AlertAdmin)
+# class AlertAdmin(admin.ModelAdmin):
+#     search_fields = ["name"]
+#
+#
+# admin.site.register(Alert, AlertAdmin)

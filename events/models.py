@@ -24,8 +24,8 @@ class Event(models.Model):
 
 ### Admin
 
-class IncidentAdmin(admin.ModelAdmin):
-    search_fields = ["name"]
-
-
-admin.site.register(Event, EventAdmin)
+# class EventAdmin(admin.):
+#     search_fields = ["name"]
+#
+#
+# admin.site.register(Event, EventAdmin)

@@ -15,8 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from .views import HomePageView
+from incidents.views import IncidentPageView
 
 urlpatterns = [
+    url(r'^$', HomePageView.as_view(), name='home'),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^incidents/', include('incidents.urls')), # ADD THIS NEW TUPLE!
+    url(r'^incidents/', IncidentPageView.as_view(), name='incidents'), # ADD HIS NEW TUPLE!
 ]

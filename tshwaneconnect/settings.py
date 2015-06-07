@@ -43,6 +43,9 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'tshwaneconnect',
     'incidents',
+    'events',
+    'alerts',
+    'locations',
     'bootstrap3',
     )
 
@@ -62,7 +65,7 @@ ROOT_URLCONF = 'tshwaneconnect.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATE_PATH],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -126,3 +129,12 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+import sys
+
+BOOTSTRAP3_FOLDER = os.path.abspath(os.path.join(BASE_DIR, '..', 'bootstrap3'))
+if BOOTSTRAP3_FOLDER not in sys.path:
+    sys.path.insert(0, BOOTSTRAP3_FOLDER)
+
+DEBUG = True
+TEMPLATE_DEBUG = DEBUG

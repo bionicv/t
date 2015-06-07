@@ -1,17 +1,16 @@
-<!DOCTYPE html>
-<html>
-{% load static %}
-<head>
-<title>Tshwane Connect</title>
-</head>
-<body>
+{% extends 'base/base.html' %}
 
-<h1>Tshwane Connect</h1>
-<p>Future Home</p>
+{% block title %}Tshwane Connect Home{% endblock %}
+
+{% block content %}
+
 <form method="post" action="">
     {{ formset.management_form }}
     {% for form in formset %}
-        {{ form }}
+    {{ form }}
     {% endfor %}
-</body>
-</html>
+</form>
+
+Built in <strong>Tshwane</strong>.
+
+{% endblock %}
